@@ -1,0 +1,43 @@
+@import "../../_variables.scss";
+body {
+  background-image: url('../../../assets/logobis.jpg');
+  background-size: cover; /* Assicura che l'immagine copra interamente lo sfondo */
+  background-position: center; /* Centra l'immagine nello sfondo */
+  background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+   height: 70vh; /*immagin altezza 100%;*/
+
+
+}
+h1 {
+  font-size: 50px;/* Ridimensiona il testo */
+  color:black;/* Imposta il colore del testo */
+  text-align: start;/* Allinea il testo al centro */
+}
+
+article {
+
+
+
+  display: block;/* Rende l'elemento un blocco */
+  text-align: left;/* Allinea il testo a sinistra */
+  width: 100%;/* Imposta la larghezza dell'elemento */
+  height: 150vh;
+  margin: 0 auto;/* Centra l'elemento */
+  color:black; /* Imposta il colore del testo */
+  font-size: 1.5rem;/* Ridimensiona il testo */
+}
+
+.article-text{
+
+  padding: 20px;/* Aggiunge spazio interno all'elemento */
+}
+a {
+  color:rgb(202, 202, 35);/* Imposta il colore del testo */
+
+  margin: 10px;/* Aggiunge spazio esterno all'elemento */
+  text-align: center;/* Allinea il testo al centro */
+}
+a:hover {
+  color: #333;/* Imposta il colore del testo */
+  text-decoration: none;/* Rimuove il sottolineato */
+}

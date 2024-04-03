@@ -1,0 +1,213 @@
+@import "../../_variables.scss";
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+ .slogan{
+background-color: black;
+margin: 0;
+}
+
+h3 {
+  color:  #6c6709;
+  margin: auto;
+  text-align: center;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, #c6bc0e, rgb(240, 228, 228), #c6bc0e);
+  width: 75%;
+  margin: 20px auto;
+}
+
+.btn {
+  background-color: #6c6709;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  //centra il bottone
+  display: block;
+  margin: auto;
+}
+
+
+
+
+
+
+
+/* Stile di base per lo carousel */
+.carousel {
+  background-color: black;
+  color: white;
+  margin: auto;
+  margin-top: 50px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,25,25);
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+/* Stile degli item del carousel per mostrare 4 card con spazio around */
+.carousel-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  overflow: hidden; /* Assicura che le card extra non siano visibili fuori dal container */
+}
+/* Stile per le immagini all'interno delle card */
+.carousel-item img {
+  max-width: 300px;
+  max-height: 300px;
+border-radius: 30%;
+margin-top: 10px;
+  // border-radius: 4px 4px 0 0;
+
+}
+
+
+/* Forza la larghezza delle .carousel-item per avere 4 card per riga */
+
+.carousel-item {
+  flex: 0 0 15%; /* Ogni card occupa il 25% dello spazio disponibile */
+  max-width: 25%; /* Imposta una larghezza massima per ciascuna card */
+  display: flex; /* Permette una migliore gestione del layout interno delle card */
+  justify-content: space-around;
+  padding: 0;
+margin: auto;
+box-sizing: border-box;
+position: relative;
+display: flex; /* Utilizza Flexbox */
+flex-direction: column; /* Disponi gli elementi in colonna */
+align-items: center; /* Centra gli elementi orizzontalmente */
+}
+
+/* Stile per il testo e gli elementi all'interno del .carousel-caption */
+.carousel-caption {
+  background-color: rgba(34, 34, 34, 0.75); /* Sfondo semi-trasparente */
+  border-radius: 4px 4px 0 0; /* Arrotonda i bordi superiori */
+ text-align: center;
+
+
+}
+
+.carousel-caption h5 {
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+}
+
+/* Stili aggiuntivi per i pulsanti di navigazione */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: $primary-color;
+  border: none;
+  color: black;
+  cursor: pointer;
+  padding: 10px 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+
+}
+
+
+/* Stili per i pulsanti di navigazione quando si passa sopra con il mouse */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #333;
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .carousel-inner {
+    justify-content: flex-start; /* Cambia se necessario per allineare gli elementi a sinistra */
+  }
+
+  .carousel-item {
+    flex: 0 0 50%; /* Occupa il 50% dello spazio disponibile */
+    max-width: 50%; /* Imposta una larghezza massima per ciascuna card */
+    /* Assicurati che non ci siano margini indesiderati o padding che influenzano la larghezza */
+    margin: auto;
+    padding: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-inner {
+    justify-content: flex-start; /* Cambia se necessario per allineare gli elementi a sinistra */
+  }
+
+  .carousel-item {
+    flex: 0 0 100%; /* Occupa il 100% dello spazio disponibile */
+    max-width: 100%; /* Imposta una larghezza massima per ciascuna card */
+    /* Assicurati che non ci siano margini indesiderati o padding che influenzano la larghezza */
+    margin: auto;
+    padding: 0;
+  }
+}
+
+
+.text {
+  text-align: center; /* Centra il testo */
+  margin-top: 20px; /* Aggiunge spazio sopra il testo per separarlo dall'immagine */
+}
+
+
+//STYLE PER CARD NOVITA ULTIMI CORSI AGGIUNTI
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.course-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin-top: 50px;
+}
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .course-info {
+    padding: 15px;
+
+    h3 {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+  }
