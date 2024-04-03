@@ -8,13 +8,13 @@
 
   </aside>
 
-  <section class="profile-section">
+  <section class="profile-section sidebar ">
     <div class="profile-card">
       <header class="card-header">
         <h2>Profile</h2>
         <p>Last updated: <span>{{user.lastUpdate}}</span></p>
       </header>
-      <div class="card-body">
+      <div class="card-body nav-item">
         <!-- Profile form -->
         <form (submit)="save()" [formGroup]="form">
           <div class="form-group">
