@@ -1,9 +1,104 @@
-input{
-  width: 50%;
+/* Stili di base per l'applicazione */
+.body-container {
+  background-color: black;
+  width: 100%;
+  margin: 0;
+  color: white; /* Assicura che il testo sia bianco per contrasto */
 }
 
-img{
-  margin: 10px;
-  width: 200px;
-  height: 200px;
+/* Stili per il contenitore delle informazioni del corso */
+.course-container {
+  width: 600px;
+  margin: auto;
+  padding: 50px;
+  background: #333;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  height: auto;
+}
+
+.course-image {
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.course-container h2 {
+  margin-top: 20px;
+}
+
+.course-container p span {
+  font-weight: bold;
+}
+
+/* Stili per i form, sia di visualizzazione che di modifica */
+.course-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Stili per link di registrazione o azioni aggiuntive */
+.action-link {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.action-link a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Stili per gruppi di form */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+/* Stili per le azioni del form come pulsanti */
+.form-actions {
+  text-align: center;
+}
+
+.form-actions button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f0f0f0; /* Fornisce un colore di sfondo per i pulsanti */
+  color: black; /* Colore del testo per i pulsanti */
+}
+
+.form-actions button:hover {
+  opacity: 0.8;
+}
+
+/* Stili per risposta adattativa */
+@media (max-width: 600px) {
+  .course-container {
+    width: auto;
+    margin: 20px;
+  }
+}
+
+/* Stile per tutti i link all'interno dell'applicazione */
+a {
+  color: white;
+  text-decoration: none;
 }

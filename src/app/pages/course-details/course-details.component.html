@@ -1,34 +1,52 @@
+<body class="body-container">
 
 
-<div *ngIf="!isAdmin">
+  <div class="course-container" *ngIf="!isAdmin">
 
-<img [src]="corso?.img" alt="">
+    <img [src]="corso?.img" alt="" class="course-image">
 
-<h2>{{corso?.name}}</h2>
+    <h2>{{corso?.name}}</h2>
 
-<p>{{corso?.description}}</p>
+    <p>{{corso?.description}}</p>
 
 
-<span>Durata: {{corso?.duration}} ore</span>
-<span>Prezzo: {{corso?.price}} euro</span>
+    <p><span>Durata:</span> {{corso?.duration}} ore</p>
+    <p><span>Prezzo:</span> {{corso?.price}} euro</p>
 
-</div>
+  </div>
 
-<form [formGroup]="form" *ngIf="isAdmin">
-  <img [src]="corso?.img" alt=""><br>
-Titolo:
-<input type="text" formControlName="name"><br>
-Description:
-<input type="text" formControlName="description"><br>
-Durata:
-<input type="number" formControlName="duration"><br>
-Prezzo:
-<input type="number" formControlName="price"><br>
-Categoria:
-<input type="text" formControlName="category"><br>
-Immagine:
-<input type="text" formControlName="img"><br>
+  <form [formGroup]="form" *ngIf="isAdmin" class="course-form course-container">
+    <img [src]="corso?.img" alt=""><br>
+    <div class="form-group">
+      <label for="">Titolo:</label>
+      <input type="text" formControlName="name"><br>
+    </div>
+    <div class="form-group">
+      <label for="">Description:</label>
+      <input type="text" formControlName="description"><br>
+    </div>
+    <div class="form-group">
+      <label for="">Durata:</label>
+      <input type="number" formControlName="duration"><br>
+    </div>
+    <div class="form-group">
+      <label for="">Prezzo:</label>
+      <input type="number" formControlName="price"><br>
+    </div>
+    <div class="form-group">
+      <label for="">Categoria:</label>
+      <input type="text" formControlName="category"><br>
+    </div>
+    <div class="form-group">
+      <label for="">Immagine:</label>
+    <input type="text" formControlName="img">
+    </div>
+    <br>
 
-<button (click)="add()" *ngIf="idCorso=='0'" [disabled]="form.invalid">Aggiungi</button>
-<button (click)="edit()" *ngIf="idCorso!=='0'" [disabled]="form.invalid">Modifica</button>
-</form>
+    <div class="form-actions">
+      <button (click)="add()" *ngIf="idCorso=='0'" [disabled]="form.invalid">Aggiungi</button>
+      <button (click)="edit()" *ngIf="idCorso!=='0'" [disabled]="form.invalid">Modifica</button>
+    </div>
+  </form>
+
+</body>

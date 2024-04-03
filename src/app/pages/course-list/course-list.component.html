@@ -51,14 +51,18 @@
 
 </div>-->
 
-<div *ngFor="let card of corsi"
-class="carousel-item" style=" width: 500px;"
-(click)="goToDetail(card.id)"><!--click sulla card per andare al dettaglio!-->
+<div class="carousel">
 
-<div class="image"><img [src]="card.img" class="img" alt="..." /></div>
-<div class="text">
+  <div *ngFor="let card of corsi"
+  class="carousel-card"
+  (click)="goToDetail(card.id)"><!--click sulla card per andare al dettaglio!-->
+
+  <div class="image"><img [src]="card.img" class="img" alt="..." /></div>
+  <div class="text">
     <h5>{{ card.name }}</h5>
     <p>{{ card.description }}</p>
-    <p>Durata: {{ card.duration }} ore, prezzo: {{card.price}} euro</p>
+    <p class="caption">Durata: {{ card.duration }} ore</p>
+    <p class="caption">Prezzo: {{card.price}} euro</p>
+  </div>
 </div>
 </div>

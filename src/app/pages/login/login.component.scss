@@ -21,9 +21,15 @@
   flex-direction: column; // Imposta l'orientamento del layout a colonna
 }
 
-.login-form h2 {
+.register {
+  margin-top: 12px;
   text-align: center; // Centra il testo orizzontalmente
   color: white; // Imposta il colore del testo a bianco
+}
+
+.register a {
+  color: white;
+  text-decoration: underline;
 }
 
 .form-group {
@@ -36,6 +42,7 @@
 }
 
 .form-group input[type="text"],
+.form-group input[type="email"],
 .form-group input[type="password"] {
   width: 100%; // Imposta la larghezza al 100% del contenitore padre
   padding: 8px; // Aggiunge un padding di 8px su tutti i lati

@@ -1,22 +1,27 @@
 <!--<h2>Benvenuto Admin {{user.name}} {{user.surname}}</h2>-->
 
-<h4>Lista di corsi</h4>
+<div class="title-section">
 
-<button type="button" class="btn btn-primary" (click)="addCorso()">Aggiungi Corso</button>
+  <h3>Lista di corsi</h3>
+
+  <button type="button" class="btn btn-success" (click)="addCorso()">Aggiungi Corso</button>
+</div>
 
 <div class="row">
 
-  <div *ngFor="let card of corsi" class="card">
-    <img [src]="card.img" class="img" alt="..." />
+  <div *ngFor="let card of corsi" class="card" style=" width: 500px;">
+    <div class="image"><img [src]="card.img" class="img" alt="..." /></div>
+<div class="text">
     <h5>{{ card.name }}</h5>
-
-    <p>{{card.description}}</p>
-    Durata: {{card.duration}} ore
-    <div>
-      <button type="button" class="btn btn-success" (click)="goToEdit(card.id)">
+    <p>{{ card.description }}</p>
+    <p class="caption">Durata: {{ card.duration }} ore</p>
+    <p class="caption">Prezzo: {{card.price}} euro</p>
+</div>
+    <div class="card-actions">
+      <button type="button" class="btn btn-primary modifica" (click)="goToEdit(card.id)">
         Modifica
       </button>
-      <button type="button" class="btn btn-danger" (click)="delete(card.id)">
+      <button type="button" class="btn btn-danger elimina" (click)="delete(card.id)">
         Elimina
       </button>
     </div>

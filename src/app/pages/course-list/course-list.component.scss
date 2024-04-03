@@ -51,15 +51,11 @@ hr {
 
 /* Stile di base per lo carousel */
 .carousel {
-  background-color: black;
-  color: white;
-  margin: auto;
-  margin-top: 50px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 4px 10px rgba(0,0,25,25);
-  margin-bottom: 20px;
-  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 /* Stile degli item del carousel per mostrare 4 card con spazio around */
@@ -68,32 +64,54 @@ hr {
   flex-wrap: nowrap;
   justify-content: space-around;
   overflow: hidden; /* Assicura che le card extra non siano visibili fuori dal container */
+  gap: 12px;
 }
+
+.carousel-card .image {
+  width: 100%;
+}
+
 /* Stile per le immagini all'interno delle card */
-.carousel-item img {
-  max-width: 300px;
-  max-height: 300px;
-border-radius: 30%;
-margin-top: 10px;
+.carousel-card img {
+  max-width: 100%;
+  height: auto;
+  max-height: 192px;
+border-radius: 8px;
+object-fit: cover;
   // border-radius: 4px 4px 0 0;
 
 }
 
 
-/* Forza la larghezza delle .carousel-item per avere 4 card per riga */
+/* Forza la larghezza delle .carousel-card per avere 4 card per riga */
 
-.carousel-item {
-  flex: 0 0 15%; /* Ogni card occupa il 25% dello spazio disponibile */
+.carousel-card {
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  flex: 0 0 calc(25% - 12px); /* Ogni card occupa il 25% dello spazio disponibile */
   max-width: 25%; /* Imposta una larghezza massima per ciascuna card */
   display: flex; /* Permette una migliore gestione del layout interno delle card */
   justify-content: space-around;
-  padding: 0;
-margin: auto;
+  padding: 12px;
+  cursor: pointer;
 box-sizing: border-box;
 position: relative;
 display: flex; /* Utilizza Flexbox */
 flex-direction: column; /* Disponi gli elementi in colonna */
 align-items: center; /* Centra gli elementi orizzontalmente */
+  transition: all 0.08s ease-in-out; /* Aggiunge un effetto di transizione al passaggio del mouse */
+}
+
+.carousel-card:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  // transform: scale(1.02); /* Ingrandisce la card al passaggio del mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06); /* Aggiunge un'ombra */
+}
+
+.carousel-card:active {
+  background-color: rgba(0, 0, 0, 0.09);
+  // transform: scale(1.02); /* Ingrandisce la card al passaggio del mouse */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.06); /* Aggiunge un'ombra */
 }
 
 /* Stile per il testo e gli elementi all'interno del .carousel-caption */
@@ -146,8 +164,8 @@ align-items: center; /* Centra gli elementi orizzontalmente */
     justify-content: flex-start; /* Cambia se necessario per allineare gli elementi a sinistra */
   }
 
-  .carousel-item {
-    flex: 0 0 50%; /* Occupa il 50% dello spazio disponibile */
+  .carousel-card {
+    flex: 0 0 calc(50% - 12px); /* Occupa il 50% dello spazio disponibile */
     max-width: 50%; /* Imposta una larghezza massima per ciascuna card */
     /* Assicurati che non ci siano margini indesiderati o padding che influenzano la larghezza */
     margin: auto;
@@ -160,8 +178,8 @@ align-items: center; /* Centra gli elementi orizzontalmente */
     justify-content: flex-start; /* Cambia se necessario per allineare gli elementi a sinistra */
   }
 
-  .carousel-item {
-    flex: 0 0 100%; /* Occupa il 100% dello spazio disponibile */
+  .carousel-card {
+    flex: 0 0 calc(100% - 12px); /* Occupa il 100% dello spazio disponibile */
     max-width: 100%; /* Imposta una larghezza massima per ciascuna card */
     /* Assicurati che non ci siano margini indesiderati o padding che influenzano la larghezza */
     margin: auto;
@@ -173,6 +191,13 @@ align-items: center; /* Centra gli elementi orizzontalmente */
 .text {
   text-align: center; /* Centra il testo */
   margin-top: 20px; /* Aggiunge spazio sopra il testo per separarlo dall'immagine */
+}
+
+.text .caption {
+  color: rgba(0, 0, 0, .72);
+  font-weight: bold;
+  font-size: 0.92rem; /* Dimensione del testo */
+  margin-bottom: 4px; /* Aggiunge spazio sotto il testo */
 }
 
 
