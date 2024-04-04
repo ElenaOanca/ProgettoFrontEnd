@@ -32,23 +32,25 @@ object-fit: cover;
 .card {
   border: 1px solid #ccc;
   border-radius: 16px;
-  flex: 0 0 calc(25% - 12px); /* Ogni card occupa il 25% dello spazio disponibile */
-  max-width: 25%; /* Imposta una larghezza massima per ciascuna card */
+  flex: 0 0 calc(22% - 2px); /* Ogni card occupa il 25% dello spazio disponibile */
+  max-width: 22%; /* Imposta una larghezza massima per ciascuna card */
   display: flex; /* Permette una migliore gestione del layout interno delle card */
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 12px;
 box-sizing: border-box;
-position: relative;
-display: flex; /* Utilizza Flexbox */
-flex-direction: column; /* Disponi gli elementi in colonna */
-align-items: center; /* Centra gli elementi orizzontalmente */
-  transition: all 0.08s ease-in-out; /* Aggiunge un effetto di transizione al passaggio del mouse */
-}
+margin-left: auto;
+// position: relative;
+// display: flex; /* Utilizza Flexbox */
+// flex-direction: column; /* Disponi gli elementi in colonna */
+// align-items: center; /* Centra gli elementi orizzontalmente */
+//   transition: all 0.08s ease-in-out; /* Aggiunge un effetto di transizione al passaggio del mouse */
+ }
 
 .text {
   text-align: center; /* Centra il testo */
   margin-top: 20px; /* Aggiunge spazio sopra il testo per separarlo dall'immagine */
 }
+
 
 .text .caption {
   color: rgba(0, 0, 0, .72);
